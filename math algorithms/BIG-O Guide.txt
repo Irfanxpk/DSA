@@ -1,0 +1,20 @@
+Calculate not dependent on input size - O(1)
+1 Loop - O(n)
+2 Nested Loop - O(n^2)
+input size reduced by half - O(log n)
+
+
+
+
+
+
+
+
+3 Selection Sort - O(n^2)
+4 Insertion Sort - O(n^2)
+5 Merge Sort - O(n log n)
+6 Bubble Sort - O(n^2)
+7 Quick Sort - O(n log n)
+8 Heap Sort - O(n log n)
+9 Bucket Sort - O(n)
+10 Radix Sort - O(dn)
