@@ -19,19 +19,99 @@
 // F(2) = 1
 
 
-function recursiveFibonacci(n){
+// function recursiveFibonacci(n){
 
-    if(n<2){
-        return n
-    }
-    return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
+//     if(n<2){
+//         return n
+//     }
+//     return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
  
-}
+// }
 
-console.log(recursiveFibonacci(1)); //1
-console.log(recursiveFibonacci(6)); //8
-console.log(recursiveFibonacci(10)); //55
+// console.log(recursiveFibonacci(1)); //1
+// console.log(recursiveFibonacci(6)); //8
+// console.log(recursiveFibonacci(10)); //55
 
 // Big-O - O(2^n)
 
 //now we undertood that recursive in fibbonacci is exponential and it is O(2^n) which is not good
+
+
+function fibo(n){
+    if(n < 2){
+        return n 
+    }
+
+    return fibo(n-1) + fibo(n-2)
+}
+
+console.log(fibo(6))
+
+function sumof(arr , index = 0){
+    if(index === arr.length){
+        return 0
+    }
+
+    return arr[index] + sumof(arr,index + 1)
+
+}
+
+let arr = [1,2,3,4,6]
+console.log(sumof(arr))
+
+
+
+function BinarySearch(arr , target){
+
+
+    return Search(arr , target , left = 0 , arr.length-1)
+
+}
+
+function Search(arr ,target , left  , right){
+
+    if (left > right){
+        return -1
+    }
+
+    let mid = Math.floor((arr.lenght)/2)
+    if(arr[mid] === target){
+        return true
+    }
+
+    if(mid > target){
+        Search(arr , target , mid + 1 ,right)
+    }else{
+        Search(arr , target , left , mid - 1)
+        
+    }
+
+}
+
+let arr1=[1,2,3,5,6]
+console.log(BinarySearch(arr1 , 6))
+
+function BinarySearch(arr, target) {
+    return Search(arr, target, left = 0, arr.length - 1);
+  }
+  
+  function Search(arr, target, left, right) {
+    if (left > right) {
+      return -1; // Target not found
+    }
+  
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) {
+      return mid; // Target found, return the index
+    }
+  
+    if (arr[mid] < target) {
+      return Search(arr, target, mid + 1, right);
+    } else {
+      return Search(arr, target, left, mid - 1);
+    }
+  }
+  
+  let arr2 = [1, 2, 3, 5, 6];
+  console.log(BinarySearch(arr2, 5)); // Output: 3
+  

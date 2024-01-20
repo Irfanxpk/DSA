@@ -1,0 +1,10 @@
+A linkedlist is a linear data structure that includes a series of connected nodes. 
+Each node consist of data value and a pointer that points to the next node.
+The list element can be easly inserted or removed without reallocation or reorganization of the entire structure.
+Random access of elements is not feasable and accessing an element has linear time complexity
+the linked list data structure support three main operations
+1. Insertion - to add an element at the bigging, end or at a given index in the list .
+2. Deletion- remove an item given its index or value
+3. Search  - Search to find an element 
+
+
