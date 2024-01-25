@@ -25,3 +25,5 @@ function merge(leftArr, rightArr) {
 
 const arr = [8,5,6,4,7,9,-1 , 2]
 console.log(mergeSort(arr))
+
+// Big O = O(nlogn)
