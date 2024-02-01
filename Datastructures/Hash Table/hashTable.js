@@ -34,7 +34,7 @@ class HashTable {
         if(this.table[i]){
             console.log(i,this.table[i])
         }
-    
+                    
     }
   }
 }
